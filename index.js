@@ -25,6 +25,23 @@ program
 .option("--amount <amount>", "New Amount")
 .option("--Category <category>", "New Category")
 .action((option) => {
-    require("./commands/update")
+    require("./commands/update")(options);
 });
 
+// Delete
+program
+    .command ("delete")
+    .description("Delete an Expense")
+    .requiredOption("--id <id>", "Expense ID")
+    .action((options) => {
+        require("./commands/delete")(options);
+    })
+
+// list
+program
+    .command ("List")
+    .description("List all Expenses")
+    .option("--category <category>", "Filter By Category")
+    .action((option) => {
+        require("./commands/list");
+    });

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const {program} = require("commander");
 
 program
@@ -45,3 +46,14 @@ program
     .action((option) => {
         require("./commands/list");
     });
+
+// Summary
+program
+    .command("summary")
+    .description("Show Expenses summary")
+    .option("--month <month>", "Month number (1-12)")
+    .action((options) => {
+        require("./commands/summary")(options);
+    });
+
+    program.parse(process.argv);

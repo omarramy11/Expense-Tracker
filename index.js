@@ -14,7 +14,7 @@ program
 .requiredOption("--amount <amount>", "Expense Amount")
 .option("--category <category>", "Expense Category", "General")
 .action((options) => {
-    require("./commands/add")
+    require("./commands/add")(options);
 });
 
 // update
@@ -25,7 +25,7 @@ program
 .option("--description <description>", "New Description")
 .option("--amount <amount>", "New Amount")
 .option("--Category <category>", "New Category")
-.action((option) => {
+.action((options) => {
     require("./commands/update")(options);
 });
 
@@ -43,8 +43,8 @@ program
     .command ("List")
     .description("List all Expenses")
     .option("--category <category>", "Filter By Category")
-    .action((option) => {
-        require("./commands/list");
+    .action((options) => {
+        require("./commands/list")(options);
     });
 
 // Summary

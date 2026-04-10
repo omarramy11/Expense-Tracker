@@ -1,0 +1,19 @@
+{
+  "expenses": [
+    {
+      "id": 1,
+      "date": "2026-04-10",
+      "description": "Lunch",
+      "amount": 20,
+      "category": "General"
+    },
+    {
+      "id": 2,
+      "date": "2026-04-10",
+      "description": "Dinner",
+      "amount": 10,
+      "category": "General"
+    }
+  ],
+  "nextId": 3
+}

@@ -2,6 +2,10 @@
 
 A simple Node.js command-line expense tracker built with `commander`.
 
+## GitHub Repository Description
+
+A lightweight CLI tool for tracking personal expenses, supporting add, update, delete, list, and monthly summary commands.
+
 ## Project Structure
 
 - `index.js` - CLI entrypoint that defines commands and options.

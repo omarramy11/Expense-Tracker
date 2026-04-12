@@ -66,4 +66,12 @@ program
     require("./commands/budget")(options);
   });
 
+  // Export
+program
+  .command("export")
+  .description("Export expenses to CSV file")
+  .action(() => {
+    require("./commands/export")();
+  });
+
     program.parse(process.argv);

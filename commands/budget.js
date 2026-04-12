@@ -1,4 +1,4 @@
-const { readData, writeData } = require("../utils/storage");
+const { readData, writeData } = require("../utils/Storage");
 
 module.exports = function budget({ month, amount }) {
   const parsedMonth = parseInt(month);

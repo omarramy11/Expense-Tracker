@@ -13,7 +13,17 @@
       "description": "Big Lunch 2",
       "amount": 25,
       "category": "General"
+    },
+    {
+      "id": 4,
+      "date": "2026-04-12",
+      "description": "Coffee",
+      "amount": 10,
+      "category": "General"
     }
   ],
-  "nextId": 4
+  "nextId": 5,
+  "budgets": {
+    "4": 50
+  }
 }

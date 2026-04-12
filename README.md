@@ -9,7 +9,7 @@ A lightweight CLI tool for tracking personal expenses, supporting add, update, d
 ## Project Structure
 
 - `index.js` - CLI entrypoint that defines commands and options.
-- `commands/` - command handlers for add, update, delete, list, and summary operations.
+- `commands/` - command handlers for add, update, delete, list, summary, budget, and export operations.
 - `utils/Storage.js` - helper for reading and writing the local data file.
 - `utils/data.json` - storage file for saved expenses.
 
@@ -45,7 +45,7 @@ node index.js update --id 1 --description "Coffee" --amount 4.75 --category Food
 ```
 
 Required options:
-- `--id <Id>` - ID of the expense to update
+- `--id <id>` - ID of the expense to update
 
 Optional options:
 - `--description <description>` - updated description
@@ -79,7 +79,26 @@ node index.js summary --month 4
 Optional option:
 - `--month <month>` - month number (`1` to `12`) to summarize expenses
 
+### Set a monthly budget
+
+```bash
+node index.js budget --month 4 --amount 500
+```
+
+Required options:
+- `--month <month>` - month number (`1` to `12`)
+- `--amount <amount>` - budget amount
+
+### Export expenses to CSV
+
+```bash
+node index.js export
+```
+
+- Exports all saved expenses to `expenses.csv` in the current working directory.
+
 ## Notes
 
 - The CLI uses a local JSON file (`utils/data.json`) to persist expenses.
+- Exported CSV output is written to `expenses.csv` in the current working directory.
 - This project uses CommonJS modules with `type: "commonjs"` in `package.json`.

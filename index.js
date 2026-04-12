@@ -56,4 +56,14 @@ program
         require("./commands/summary")(options);
     });
 
+    // Budget
+program
+  .command("budget")
+  .description("Set a monthly budget")
+  .requiredOption("--month <month>", "Month number (1-12)")
+  .requiredOption("--amount <amount>", "Budget amount")
+  .action((options) => {
+    require("./commands/budget")(options);
+  });
+
     program.parse(process.argv);
